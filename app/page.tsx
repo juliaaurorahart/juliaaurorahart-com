@@ -1,10 +1,3 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Julia Aurora Hart",
-  description: "A home for work, ideas, and experiments by Julia Aurora Hart.",
-};
-
 export default function Home() {
   return (
     <main>
