@@ -1,6 +1,35 @@
+"use client"
+
+import { useEffect, useState, type CSSProperties } from "react"
+
+const MOOD_KEY = "jah-visual-mood"
+
 export default function Home() {
+  const [mood, setMood] = useState(0.42)
+
+  useEffect(() => {
+    const savedMood = Number(localStorage.getItem(MOOD_KEY))
+    if (Number.isFinite(savedMood) && savedMood >= 0 && savedMood <= 1) setMood(savedMood)
+  }, [])
+
+  const changeMood = (value: number) => {
+    setMood(value)
+    localStorage.setItem(MOOD_KEY, String(value))
+  }
+
+  const visualStyle = {
+    "--bright": `${mood * 100}%`, "--site-brightness": `${1 + mood * 1.2}`, "--site-saturation": `${.72 + mood * 1.45}`,
+    "--hero-height": `${730 + mood * 110}px`, "--hero-top": `${148 + mood * 28}px`,
+    "--hero-title-top": `${52 + mood * 12}px`, "--hero-title-bottom": `${110 + mood * 30}px`,
+    "--hero-size": `${9.7 + mood * .7}vw`, "--hero-letter": `${-.075 + mood * .018}em`, "--hero-line": `${.88 + mood * .04}`,
+    "--orb-radius": `${50 - mood * 18}%`, "--orb-blur": `${6 - mood * 5}px`, "--orb-opacity": `${.25 + mood * .75}`,
+    "--manifesto-gap": `${58 + mood * 45}px`, "--manifesto-pad": `${130 + mood * 42}px`,
+    "--card-height": `${420 + mood * 34}px`, "--card-pad": `${23 + mood * 8}px`, "--card-radius": `${mood * 18}px`, "--card-lift": `${mood * -8}px`,
+    "--closing-pad": `${115 + mood * 38}px`, "--closing-size": `${7.5 + mood * .5}vw`, "--closing-letter": `${-.07 + mood * .015}em`,
+  } as CSSProperties
+
   return (
-    <main>
+    <main className="site-shell" style={visualStyle}>
       <nav className="nav" aria-label="Primary navigation">
         <a className="wordmark" href="#top">JAH</a>
         <div className="nav-links">
@@ -8,13 +37,18 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="mailto:hello@juliaaurorahart.com">Contact</a>
         </div>
+        <label className="mood-control" title="Adjust the visual mood">
+          <span>Drab</span>
+          <input type="range" min="0" max="1" step="0.01" value={mood} onChange={(event) => changeMood(Number(event.target.value))} aria-label="Visual mood, drab to brighter" />
+          <span>Brighter</span>
+        </label>
       </nav>
 
       <section className="hero" id="top">
         <p className="eyebrow">JULIA AURORA HART</p>
-        <h1>Making room<br />for what matters.</h1>
+        <h1>Making room<br />for things becoming.</h1>
         <div className="hero-foot">
-          <p>A personal home for work, ideas, experiments, and the quiet connections between them.</p>
+          <p>A warm, unruly home for work, experiments, and the quiet connections between them.</p>
           <a className="text-link" href="#work">Explore the work <span>↓</span></a>
         </div>
         <div className="orb orb-one" aria-hidden="true" />
@@ -38,9 +72,9 @@ export default function Home() {
           <article className="project-card large-card">
             <div className="project-mark mark-canvas" aria-hidden="true"><span /><span /><span /></div>
             <p className="project-kind">EXPERIMENT</p>
-            <h2>OSO</h2>
-            <p>A thinking canvas for drawings, meaningful objects, and the relationships that bring them to life.</p>
-            <a href="#contact">Follow its progress <span>↗</span></a>
+            <h2>OSA</h2>
+            <p>A playful thinking canvas for drawings, meaningful objects, and the relationships that bring them to life.</p>
+            <a href="https://osa.juliaaurorahart.com">Open OSA <span>↗</span></a>
           </article>
           <article className="project-card">
             <div className="project-mark mark-field" aria-hidden="true" />
