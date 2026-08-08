@@ -53,6 +53,7 @@ export default function Home() {
         </div>
         <div className="orb orb-one" aria-hidden="true" />
         <div className="orb orb-two" aria-hidden="true" />
+        <div className="hero-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span></div>
       </section>
 
       <section className="manifesto" id="about">
