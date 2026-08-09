@@ -71,18 +71,18 @@ export default function Home() {
         </div>
         <div className="work-grid">
           <article className="project-card large-card">
-            <div className="project-mark mark-canvas" aria-hidden="true"><span /><span /><span /></div>
-            <p className="project-kind">EXPERIMENT</p>
-            <h2>OSA</h2>
-            <p>A playful thinking canvas for drawings, meaningful objects, and the relationships that bring them to life.</p>
-            <a href="https://osa.juliaaurorahart.com">Open OSA <span>↗</span></a>
+            <div className="project-mark mark-field-notes" aria-hidden="true"><span /><span /><span /></div>
+            <p className="project-kind">LIVING NOTEBOOK</p>
+            <h2>The Field</h2>
+            <p>Make notes, draw, gather fragments, and let ideas grow before they need structure.</p>
+            <a href="https://osa.juliaaurorahart.com/?view=field">Enter The Field <span>↗</span></a>
           </article>
           <article className="project-card">
-            <div className="project-mark mark-field" aria-hidden="true" />
-            <p className="project-kind">IN PROGRESS</p>
-            <h2>Field notes</h2>
-            <p>Observations, fragments, and ideas worth returning to.</p>
-            <a href="#contact">Coming soon <span>↗</span></a>
+            <div className="project-mark mark-canvas" aria-hidden="true"><span /><span /><span /></div>
+            <p className="project-kind">STRUCTURE VIEW</p>
+            <h2>OSA</h2>
+            <p>See the objects in The Field as connected trees, relationships, and future logic.</p>
+            <a href="https://osa.juliaaurorahart.com/?view=osa">Open OSA <span>↗</span></a>
           </article>
           <article className="project-card pale-card">
             <div className="project-mark mark-sun" aria-hidden="true" />
