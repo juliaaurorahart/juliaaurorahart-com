@@ -69,3 +69,12 @@ footer { display: flex; justify-content: space-between; padding: 20px 4vw; color
 .closing { position: relative; overflow: hidden; background: radial-gradient(circle at 84% 40%, rgba(255,193,101,.55), transparent 16%), linear-gradient(132deg, #3e234c, #8a2f6b 56%, #e46275); }.closing::after { content: '✧'; position: absolute; right: 10vw; bottom: -44px; color: rgba(255,220,132,.7); font-size: 190px; transform: rotate(18deg); }
 footer { background: #351e3d; color: #ffd7ef; }
 @media (max-width: 760px) { .work-grid { padding: 14px 5vw 0; }.project-card { margin-bottom: 14px; }.hero::before { bottom: 22px; letter-spacing: .18em; }.manifesto::after { right: 7vw; } }
+
+/* Rich editorial pink: dramatic, feminine, and clean rather than candy-coloured. */
+.site-shell { --paper: color-mix(in srgb, #f2e3df var(--drab), #fff8f5 var(--bright)); background: radial-gradient(circle at 95% 20%, rgba(203,28,66,.11), transparent 22%), var(--paper); }
+.hero { background: radial-gradient(circle at 78% 20%, rgba(255,247,239,.84) 0 4%, transparent 15%), radial-gradient(ellipse at 73% 28%, rgba(231,104,143,.5), transparent 27%), linear-gradient(128deg, #271b25 0%, #741a35 44%, #c82f4e 71%, #f0a0a6 100%); }
+.hero::before { color: rgba(255,241,224,.74); text-shadow: 0 0 18px rgba(255,180,206,.72); }
+.manifesto::after { color: #bd2648; text-shadow: none; }
+.work-grid { gap: 12px; }.project-card { border-color: rgba(85,24,38,.22); box-shadow: 0 16px 30px rgba(70,17,36,.09); }.large-card { background: linear-gradient(145deg, #4b172d, #9f243d 67%, #de5265); }.project-card:not(.large-card):not(.pale-card) { color: #3b1d2b; background: linear-gradient(145deg, #fffaf4, #f4d8d6 61%, #e9a0af); }.pale-card { color: #3b1d2b; background: linear-gradient(145deg, #f2ece5, #d9c9ce 58%, #c45467); }
+.mark-field-notes { background: repeating-linear-gradient(0deg, transparent 0 28px, rgba(255,250,246,.28) 29px 30px), linear-gradient(135deg, #73162f, #d7435e 60%, #f1b2b7); }.mark-canvas { border-color: rgba(76,27,44,.35); background-color: rgba(246,239,232,.44); }.mark-canvas span { border-color: #8e2840; background: rgba(173,49,77,.13); }.mark-canvas span:nth-child(3) { background: #c5284f; }
+.closing { background: radial-gradient(circle at 84% 40%, rgba(255,242,218,.48), transparent 14%), linear-gradient(132deg, #281b28, #6f1a36 52%, #b72e4b); }.closing::after { color: rgba(255,235,224,.42); }
