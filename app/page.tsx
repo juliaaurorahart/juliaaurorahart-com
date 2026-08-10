@@ -52,6 +52,7 @@ export default function Home() {
         </div>
         <div className="orb orb-one" aria-hidden="true" />
         <div className="orb orb-two" aria-hidden="true" />
+        <img className="hero-garden" src="/solarpunk-garden.png" alt="A small garden robot tending pink flowers beside a rabbit and bird." />
         <div className="hero-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span></div>
       </section>
 
@@ -60,6 +61,7 @@ export default function Home() {
         <div className="manifesto-copy">
           <p>This is a living studio: a place to gather projects, follow questions, and share work as it takes shape.</p>
           <p className="muted">Not everything needs to arrive finished. Some things deserve room to become.</p>
+          <p className="collaboration-note">This site is an ongoing exploration with GPT: Julia is learning, asking, shaping, and testing what creative technology can become. The work here is made in collaboration, not presented as something she built alone.</p>
         </div>
       </section>
 
