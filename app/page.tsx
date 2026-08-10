@@ -53,6 +53,7 @@ export default function Home() {
         <div className="orb orb-one" aria-hidden="true" />
         <div className="orb orb-two" aria-hidden="true" />
         <img className="hero-garden" src="/solarpunk-garden.png" alt="A small garden robot tending pink flowers beside a rabbit and bird." />
+        <p className="hero-art-credit">AI-generated illustration, created for this site with GPT.</p>
         <div className="hero-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span></div>
       </section>
 
