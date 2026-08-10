@@ -1,16 +1,15 @@
 "use client"
 
-import { useEffect, useState, type CSSProperties } from "react"
+import { useState, type CSSProperties } from "react"
 
 const MOOD_KEY = "jah-visual-mood"
 
 export default function Home() {
-  const [mood, setMood] = useState(0.42)
-
-  useEffect(() => {
+  const [mood, setMood] = useState(() => {
+    if (typeof window === "undefined") return 0.42
     const savedMood = Number(localStorage.getItem(MOOD_KEY))
-    if (Number.isFinite(savedMood) && savedMood >= 0 && savedMood <= 1) setMood(savedMood)
-  }, [])
+    return Number.isFinite(savedMood) && savedMood >= 0 && savedMood <= 1 ? savedMood : 0.42
+  })
 
   const changeMood = (value: number) => {
     setMood(value)
